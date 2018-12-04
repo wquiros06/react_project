@@ -1,0 +1,21 @@
+.contenedor-empresa{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 1em;
+  }
+  
+  .encabezado-empresa{
+    color:#282c34;
+    font-weight: bold;
+  }
+  
+  .fechas{
+    font-size: 11px;
+  }
+  
+  .texto-empresa{
+    border-top: solid .5px;
+    border-top-style: double;
+    margin-top: .5em;
+  }

@@ -1,0 +1,8 @@
+.tarjeta{
+    background-color: #BFC9DE;
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 5px auto;
+}

@@ -1,0 +1,31 @@
+form{
+    background-color: #BFC9DE;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px auto;
+}
+
+
+label{
+    margin: .8em;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 95%;
+    padding: 12px 20px;
+    border-radius: 10px 10px 10px 10px;
+    align-self: center;
+}
+
+input[type=checkbox] {
+    align-self: left !important;
+}
