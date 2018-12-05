@@ -28,11 +28,8 @@ class ContactoContenedor extends Component{
     render(){
         return(
             <form onSubmit={this.handleSubmit}>
-                <Contacto 
-                    nombre={this.state.nombre}
-                    apellidos={this.state.apellidos}/>
-                <ProvinciasContenedor 
-                    OnSelectProvincia={this.handleSelect}/>
+                <Contacto />
+                <ProvinciasContenedor />
                 <input type="submit" value="Enviar"/>
             </form>            
         );

@@ -17,7 +17,7 @@ class Provincias extends Component  {
         return(
             <label>
                 Seleccione:<br/>
-                <Select value={this.props.selectedOption} options={this.props.provincias} onChange={this.props.handleChange}/>
+                <Select options={this.props.provincias} onChange={this.props.handleChange}/>
             </label>
         )
     }  

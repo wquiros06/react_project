@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../estilos/empresa.css'
 
 const Empresa = (props) => (
-    <div className="contenedor-empresa">                
+    <div key={props.key} className="contenedor-empresa">                
         <div className="encabezado-empresa">
             {props.name}
         </div>

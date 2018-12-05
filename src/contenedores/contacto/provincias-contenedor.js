@@ -40,6 +40,7 @@ class ProvinciasContenedor extends Component{
                         <label>
                             Provincia: <br/>
                         <Select 
+                        onChange={this.handleSelect}
                         value={this.state.selectedOption}
                         options={[{value:"1", label:"San Jose"},
                                       {value:"2", label:"Alajuela"},

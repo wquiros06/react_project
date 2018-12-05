@@ -35,34 +35,34 @@ class EmpresaComponente extends Component{
         }
 
         render() {
-            const {error, cargado, elementos} = this.state;
+            const {error, cargado} = this.state;
             if(error){
                 return <div>Error: {error.message}</div>
             }else if(!cargado){
                 return <div>Cargando...</div>
             }else{
                 return(
-                    <div>
-                        {
-                            this.state.elementos.map((brewery,i) =>{
-                                return(
-                                    <div Key={brewery.id} className="tarjeta">
-                                        <Origen 
-                                        key={brewery.id}
-                                        country={brewery.country}
-                                        state={brewery.state}
-                                        city={brewery.city}
-                                        />
-                                        <Empresa 
-                                        key={brewery.id}
-                                        name={brewery.name}
-                                        brewery_type={brewery.brewery_type}
-                                        website_url={brewery.website_url}
-                                        />
-                                    </div>
-                                );
-                            })
-                        }                    
+                    <div key="inicio">
+                        
+                            {this.state.elementos.map((elem,i) =>{
+                                    return(
+                                        <div className="tarjeta">
+                                            <Origen 
+                                            key={elem.id}
+                                            country={elem.country}
+                                            state={elem.state}
+                                            city={elem.city}
+                                            />
+                                            <Empresa 
+                                            key={elem.name}
+                                            name={elem.name}
+                                            brewery_type={elem.brewery_type}
+                                            website_url={elem.website_url}
+                                            />
+                                        </div>
+                                    );
+                                })
+                            } 
                     </div> 
             );
         }
