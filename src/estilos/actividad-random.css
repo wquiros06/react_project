@@ -1,19 +1,14 @@
 .actividad{
     display: flex;
-    flex-direction: column;
-    background-color: #98a2b6;
+    justify-content: center;
+    justify-items: center;
+    background-color: #282c34;
     justify-content: center;
     margin: 1px auto;
 }
 
-.titulo{
-    color:#282c34;
+label{
+    color: #98a2b6;
     font-weight: bold;
-    align-content: center;
-}
-
-.subtitulo{
-    color:#282c34;
     font-style: italic;
-    align-content: center;
 }

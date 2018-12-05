@@ -12,26 +12,37 @@ class ActividadRandomContenedor extends Component{
     }
 
     componentDidMount(){
+        console.log("componentDidMount");
+        this.timerID = setInterval(
+            () => this.cargar(),
+            3000
+        );
+    }
+
+    componentWillUnmount(){
+        console.log("componentWillUnmount");
+        clearInterval(this.timerID);
+    }
+
+    cargar(){
         fetch("https://www.boredapi.com/api/activity")
-            .then(respuesta => respuesta.json())
-            .then(
-                resultado => {
-
-                    console.log('resultado componentDidMount '+resultado);
-                    this.setState({
-                        cargado: true,
-                        actividad: resultado
-                    });                
-            },
-
-            error => {
+        .then(respuesta => respuesta.json())
+        .then(
+            resultado => {
+                console.log('resultado componentDidMount '+resultado);
                 this.setState({
                     cargado: true,
-                    error
-                });
-            }
-            );
+                    actividad: resultado
+                });                
+        },
+        error => {
+            this.setState({
+                cargado: true,
+                error
+            });
         }
+        );
+    }
 
    render(){
     const {error, cargado, actividad} = this.state;
@@ -44,8 +55,7 @@ class ActividadRandomContenedor extends Component{
        return(
            <div>
                 <ActividadRandom 
-                    activity={actividad.activity}
-                    type={actividad.type}/>
+                    activity={actividad.activity}/>
            </div>
        )
     }
