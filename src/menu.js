@@ -9,7 +9,6 @@ import {
 import App from "./App"
 import EmpresaComponente from "./contenedores/empresa-componente"
 import ContactoContenedor from "./contenedores/contacto/contacto-contenedor"
-import ControlledCarousel from "./contenedores/Carousel-contenedor"
 
 
 import Notfound from './notfound'
