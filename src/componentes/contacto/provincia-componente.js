@@ -5,7 +5,8 @@ import Select from 'react-select'
 class Provincias extends Component  {
     constructor(props) {
         super(props);
-        console.log(props);
+
+        console.log('props de componente/contaco/provincia-componente '+this.props.options);
     }
 
     handleChange = (selectedOption) => {

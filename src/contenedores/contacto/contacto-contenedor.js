@@ -12,8 +12,8 @@ class ContactoContenedor extends Component{
                 selectedOption: {value:"1", label:"San José"}
             };
 
-            console.log(this.state.nombre);
-            console.log(this.state.apellidos);
+            console.log('nombre' +this.state.nombre);
+            console.log('apellidos' +this.state.apellidos);
     }
 
     handleSelect = (selectedOption) => {

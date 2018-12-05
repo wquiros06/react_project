@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Provincias from "../../componentes/contacto/provincia-componente"
 import '../../estilos/contacto.css';
+import Select from 'react-select'
 
 class ProvinciasContenedor extends Component{
     constructor(props){
         super(props);
         this.state = {
             error: null,
-            elementos: []
+            elementos: [],
+            selectedOption: {value:'', label:''}
         }
     }
 
@@ -35,10 +37,25 @@ class ProvinciasContenedor extends Component{
         render() {
                 return(
                     <div>
-                        <Provincias  value={this.state.selectedOption} options={this.state.elementos}/>
+                        <label>
+                            Provincia: <br/>
+                        <Select 
+                        value={this.state.selectedOption}
+                        options={[{value:"1", label:"San Jose"},
+                                      {value:"2", label:"Alajuela"},
+                                      {value:"3", label:"Cartago"},
+                                      {value:"4", label:"Heredia"},
+                                      {value:"4", label:"Guanacaste"},
+                                      {value:"4", label:"Puntarenas"},
+                                      {value:"4", label:"Limón"}]} />
+                        </label>
+                      
                     </div> 
             );
         }
 }
+/*
+<Provincias value={this.state.selectedOption} options={this.state.elementos}/>
+*/
 
 export default ProvinciasContenedor;
