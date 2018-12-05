@@ -2,13 +2,28 @@
     display: flex;
     justify-content: center;
     justify-items: center;
-    background-color: #282c34;
+    /*background-color: #282c34;*/
+    background-image: url("https://picsum.photos/1000/100/?image=817");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+    background-size: cover;
     justify-content: center;
-    margin: 1px auto;
+    padding: 2%;
 }
 
 label{
-    color: #98a2b6;
+    color: #e9effc;
     font-weight: bold;
     font-style: italic;
+    font-size: 18pt;
 }
+
+/*
+https://picsum.photos/1000/100/?image=1051
+https://picsum.photos/1000/100/?image=13
+https://picsum.photos/1000/100/?image=916
+https://picsum.photos/1000/100/?image=178
+559
+817
+*/

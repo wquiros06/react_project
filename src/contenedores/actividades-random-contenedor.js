@@ -12,7 +12,6 @@ class ActividadRandomContenedor extends Component{
     }
 
     componentDidMount(){
-        console.log("componentDidMount");
         this.timerID = setInterval(
             () => this.cargar(),
             3000
@@ -20,7 +19,6 @@ class ActividadRandomContenedor extends Component{
     }
 
     componentWillUnmount(){
-        console.log("componentWillUnmount");
         clearInterval(this.timerID);
     }
 
@@ -29,7 +27,6 @@ class ActividadRandomContenedor extends Component{
         .then(respuesta => respuesta.json())
         .then(
             resultado => {
-                console.log('resultado componentDidMount '+resultado);
                 this.setState({
                     cargado: true,
                     actividad: resultado
@@ -46,7 +43,6 @@ class ActividadRandomContenedor extends Component{
 
    render(){
     const {error, cargado, actividad} = this.state;
-    console.log('actividad '+ actividad);
     if(error){
         return <div>Error: {error.message}</div>
     }else if(!cargado){
